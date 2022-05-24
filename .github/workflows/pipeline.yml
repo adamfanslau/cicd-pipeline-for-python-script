@@ -9,7 +9,7 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v3
     - run: pip install pylint
-    - run: pylint hello.py
+    - run: pylint --disable=C0304 --disable=C0114 hello.py
     - run: python hello.py
 
   build:
